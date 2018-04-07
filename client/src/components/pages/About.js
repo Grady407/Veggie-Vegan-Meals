@@ -2,13 +2,16 @@ import React from "react";
 
 const About = () => (
   <div>
-    <h1>About Page</h1>
+    <h1>This site...</h1>
     <p>
-      Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
-      ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus porta. Nam
-      quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-      imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
-      diam, sit amet facilisis lectus blandit at.
+      This site has been brought to you by 'The Blinking Code Cursor'!
+      <br/>
+      In my efforts to facilitate healthy eating, I've used many hours of my life trying to code this site to the best of my current ability.
+      I've experienced many health benefits from eating healthy. Some of which includes a promotion at work, multiplie likes on instagram, and I've even started jogging again.
+      <br/>
+      But honestly, even though I'm not consistent with my healty diet, I do notice that I think more clearly, I have more energy, and my muscles are more defined ;-).
+      <br/>
+      I hope you enjoy using this site and I hope you keep it alive by participating. If you have any suggestions on how I can make it better, please leave me a comment.
     </p>
   </div>
 );
