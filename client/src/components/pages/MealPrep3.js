@@ -17,9 +17,9 @@ class MealPrep extends Component {
   }
 
   loadRecipes = () => {
-    API.getRecipes()
+    API.getBooks()
       .then(res =>
-        this.setState({ recipes: res.data, username: "", recipe: "", youtubelink: "" })
+        this.setState({ books: res.data, username: "", recipe: "", youtubelink: "" })
       )
       .catch(err => console.log(err));
   };
@@ -40,12 +40,12 @@ class MealPrep extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveRecipe({
+      API.saveBook({
         title: this.state.username,
         author: this.state.recipe,
         synopsis: this.state.youtubelink
       })
-        .then(res => this.loadRecipes())
+        .then(res => this.loadBooks())
         .catch(err => console.log(err));
     }
   };

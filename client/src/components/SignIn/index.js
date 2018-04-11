@@ -7,6 +7,7 @@ const SignIn = (props)=> {
 	return (
 		<div>
 			<h1>SIGN IN</h1>
+			<h3>To access this part of the site please sign in or click "sign up" to continue.</h3>
 			<Link to = "/signup" >Go to sign up</Link>
 			<form>
 				<label>Email</label><br/>

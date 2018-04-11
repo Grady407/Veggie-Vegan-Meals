@@ -4,7 +4,7 @@ const About = () => (
   <div>
     <h1>This site...</h1>
     <p>
-      This site has been brought to you by 'The Blinking Code Cursor'!
+    ...
       <br/>
       In my efforts to facilitate healthy eating, I've used many hours of my life trying to code this site to the best of my current ability.
       I've experienced many health benefits from eating healthy. Some of which includes a promotion at work, multiplie likes on instagram, and I've even started jogging again.

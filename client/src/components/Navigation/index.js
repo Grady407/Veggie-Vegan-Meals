@@ -46,7 +46,7 @@ const Navigation = props => (
 </nav>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8" id="coolfont">
 
 	  <h1>Veggie Vegan Meals</h1>
 	  <p>This app is for the people, by the people. Find recipes and posts from others who are trying to transition to a more healthy lifestyle.</p>
