@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import API from "../../utils/API";
 
-
+ 
 class MealPrep extends Component {
 
   state = {
@@ -39,11 +39,11 @@ class MealPrep extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
+    if (this.state.youtubelink && this.state.username) {
       API.saveRecipe({
-        title: this.state.username,
-        author: this.state.recipe,
-        synopsis: this.state.youtubelink
+        username: this.state.username,
+        youtubelink: this.state.youtubelink,
+        recipe: this.state.recipe
       })
         .then(res => this.loadRecipes())
         .catch(err => console.log(err));
@@ -82,8 +82,35 @@ render (){
   <br/>
     
   </form>
-<button id="myBtn"  disabled={!(this.state.author && this.state.title)}
+<button id="myBtn"  disabled={!(this.state.username && this.state.youtubelink && this.state.recipe)}
                 onClick={this.handleFormSubmit}>Add Your Recipie</button>
+
+    <br/>
+    <br/>
+    <div>
+
+    {this.state.recipes.length ? (
+              <div>
+                {this.state.recipes.map(recipe => {
+                  return (
+                    <ul>
+                    <li key={recipe._id}>
+                      <a href={"/recipe/" + recipe._id}>
+                        <strong>
+                          {recipe.youtubelink} by {recipe.username}
+                        </strong>
+                      </a>
+                      <button  onClick={() => this.deleteRecipe(recipe._id)}>delete</button>
+                    </li>
+                    </ul>
+                  );
+                })}
+              </div>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+
+      </div>
 
 </div>
 );

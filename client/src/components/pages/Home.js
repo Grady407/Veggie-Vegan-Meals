@@ -8,7 +8,7 @@ const Home = () => (
     <div class="col-md-8">
     <h1>Meal prep of the week</h1>
     <p>
-    Meal prep of the week images go here......
+      April 9th - April 13th
     </p>
     <img src={require ("./veganimage.jpg")} id="vegan" class="w3-circle" alt="food"/>
     </div>
