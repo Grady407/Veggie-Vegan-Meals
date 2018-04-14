@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const Navigation = props => (
     <div>
-        <div>
-	<nav class="navbar navbar-inverse">
+
+      <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 
     
@@ -45,6 +45,8 @@ const Navigation = props => (
     </div>
   </div>
 </nav>
+        <div id="backimg">
+	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8" id="coolfont">
@@ -53,7 +55,7 @@ const Navigation = props => (
 	  <p>This app is for the people, by the people. Find recipes and posts from others who are trying to transition to a more healthy lifestyle.</p>
 	</div>
 	<div class="col-md-4">
-  <h3>Eat right. Live good. Stay healthy. Live long.</h3>
+  <h3 id="high">Eat right. Live good. Stay healthy. Live long.</h3>
   </div>
 	</div>
 	</div>

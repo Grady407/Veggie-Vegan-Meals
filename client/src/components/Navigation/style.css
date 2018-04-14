@@ -3,9 +3,27 @@
     font-size: 20px;
 }
 
-body {background-color: rgba(255, 153, 0, 0.301);}
+body {background-color: rgba(77, 67, 50, 0.342);}
 
 #coolfont {
     font-family: 'Bangers', cursive;
     color:brown;
+}
+
+
+#backimg {
+    background-image: url("./images/OH71GW0.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#high {
+    color:white;
 }
