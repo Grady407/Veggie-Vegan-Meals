@@ -54,10 +54,12 @@ render (){
     return(
   <div>
     <h1>Meal Prep</h1>
-    <p>
-   This part is for the meal prep
-    </p>
-        
+    <h4>
+   Got a nice recipe?! Submit it here...
+    </h4>
+  <div class="container">
+  <div calss="row">
+  <div class="col-md-5">    
   <form >
     Username <input
                 value={this.state.username}
@@ -73,7 +75,7 @@ render (){
                 placeholder="Youtubelink (required)"
               />
     <br/>
-    Recipe <input
+    Recipe <textarea className="userdatabox"
                 value={this.state.recipe}
                 onChange={this.handleInputChange}
                 name="recipe"
@@ -82,6 +84,9 @@ render (){
   <br/>
     
   </form>
+  </div>
+  </div>
+  </div>
 <button id="myBtn"  disabled={!(this.state.username && this.state.youtubelink && this.state.recipe)}
                 onClick={this.handleFormSubmit}>Add Your Recipie</button>
 
@@ -90,24 +95,33 @@ render (){
     <div>
 
     {this.state.recipes.length ? (
-              <div>
+              <div class="container">
                 {this.state.recipes.map(recipe => {
                   return (
-                    <ul>
-                    <li key={recipe._id}>
-                      <a href={"/recipe/" + recipe._id}>
+                    <div class="row" key={recipe._id} id="datadisplayed">
+                      {/* <a href={"/recipe/" + recipe._id}> */}
+                      <div class="col-md-2">
                         <strong>
-                          {recipe.youtubelink} by {recipe.username}
+                          {recipe.youtubelink}
                         </strong>
-                      </a>
+                        </div>
+
+                        <div class="col-md-2">
+                        {recipe.username}
+                        </div>
+
+                        <div class="col-md-2">
+                        {recipe.recipe}
+                        </div>
+                      {/* </a> */}
                       <button  onClick={() => this.deleteRecipe(recipe._id)}>delete</button>
-                    </li>
-                    </ul>
+                    
+                    </div>
                   );
                 })}
               </div>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>Nada!</h3>
             )}
 
       </div>

@@ -10,10 +10,19 @@ const Home = () => (
     <p>
       April 9th - April 13th
     </p>
-    <img src={require ("./veganimage.jpg")} id="vegan" class="w3-circle" alt="food"/>
+    <img src={require ("./Curried-Chickpea-Meal-Prep-Bowls-4.jpg")} id="vegan" class="w3-circle" alt="food"/>
     </div>
     <div class="col-md-4">
-    <button className="buttons">Click on the link below to know more</button>
+    <br/>
+    <br/>
+    <h3>Curried Chickpea Bowls with Garlicky Spinach</h3>
+    <ul>
+      <li>Garlicky Spinach</li>
+      <li>Curried Chickpeas</li>
+      <li>White Rice</li>
+
+      </ul>
+    <button className="buttons"><a href="https://www.eatingbirdfood.com/curried-chickpea-bowls/" target="_blank">Click here to know more</a></button>
     
    
     </div>

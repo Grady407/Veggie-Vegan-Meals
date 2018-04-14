@@ -38,8 +38,9 @@ const Navigation = props => (
 
 	 <ul class="nav navbar-nav navbar-right">
         <li><span>Join</span></li>
-		<li><Link to="/signin">Log-in</Link></li>
-		<li><span className="logOutText" onClick={props.handleLogout}>Log-out</span></li>
+		<li><span className="logOutText"><Link to="/signin">Log-in</Link></span></li>
+    <li>./.</li>
+		<li><span className="logOutText" onClick={props.handleLogout}><Link to="/">Log-out</Link></span></li>
 	</ul>
     </div>
   </div>

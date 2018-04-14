@@ -47,5 +47,17 @@
 img {
     border-radius: 8px;
     width: 400px;
-    height: 400px;
+    height: 450px;
+}
+
+#datadisplayed {
+    background: rgb(214, 130, 19);
+}
+
+.userdatabox {
+    width: 400px;
+    height: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }

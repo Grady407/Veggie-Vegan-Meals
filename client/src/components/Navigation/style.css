@@ -1,5 +1,6 @@
 .logOutText  {
-    color: white
+    color: white;
+    font-size: 20px;
 }
 
 body {background-color: rgba(255, 153, 0, 0.301);}
