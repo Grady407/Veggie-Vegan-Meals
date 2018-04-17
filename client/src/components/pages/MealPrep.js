@@ -103,7 +103,7 @@ render (){
                       <div class="col-md-2 edge">
                         <strong>
                           Link:
-                          {recipe.meallink}
+                         <a href={recipe.meallink} target="_blank">LINKED</a>
                         </strong>
                         </div>
 
