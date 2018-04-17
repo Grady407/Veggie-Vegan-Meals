@@ -51,7 +51,7 @@ img {
 }
 
 #datadisplayed {
-    background: rgb(214, 130, 19);
+    background: rgb(48, 173, 142);
 }
 
 .userdatabox {
@@ -60,4 +60,15 @@ img {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+.edge {
+    border-style: solid;
+    word-wrap: break-word;
+}
+
+#checkit {
+    font-family: 'Gaegu', cursive;
+font-family: 'Catamaran', sans-serif;
+font-size: 25px;
 }

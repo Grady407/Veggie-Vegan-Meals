@@ -9,7 +9,7 @@ class MealPrep extends Component {
     recipes: [],
     username: "",
     recipe: "",
-    youtubelink: ""
+    meallink: ""
   };
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class MealPrep extends Component {
   loadRecipes = () => {
     API.getRecipes()
       .then(res =>
-        this.setState({ recipes: res.data, username: "", recipe: "", youtubelink: "" })
+        this.setState({ recipes: res.data, username: "", recipe: "", meallink: "" })
       )
       .catch(err => console.log(err));
   };
@@ -39,10 +39,10 @@ class MealPrep extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.youtubelink && this.state.username) {
+    if (this.state.meallink && this.state.username) {
       API.saveRecipe({
         username: this.state.username,
-        youtubelink: this.state.youtubelink,
+        meallink: this.state.meallink,
         recipe: this.state.recipe
       })
         .then(res => this.loadRecipes())
@@ -68,11 +68,11 @@ render (){
                 placeholder="username (required)"
               />
     <br/>
-    YouTube Link <input
-                value={this.state.youtubelink}
+    Meal Link <input
+                value={this.state.meallink}
                 onChange={this.handleInputChange}
-                name="youtubelink"
-                placeholder="Youtubelink (required)"
+                name="meallink"
+                placeholder="meallink (required)"
               />
     <br/>
     Recipe <textarea className="userdatabox"
@@ -87,7 +87,7 @@ render (){
   </div>
   </div>
   </div>
-<button id="myBtn"  disabled={!(this.state.username && this.state.youtubelink && this.state.recipe)}
+<button id="myBtn"  disabled={!(this.state.username && this.state.meallink && this.state.recipe)}
                 onClick={this.handleFormSubmit}>Add Your Recipie</button>
 
     <br/>
@@ -100,22 +100,26 @@ render (){
                   return (
                     <div class="row" key={recipe._id} id="datadisplayed">
                       {/* <a href={"/recipe/" + recipe._id}> */}
-                      <div class="col-md-2">
+                      <div class="col-md-2 edge">
                         <strong>
-                          {recipe.youtubelink}
+                          Link:
+                          {recipe.meallink}
                         </strong>
                         </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-4 edge">
+                        Posted by: 
                         {recipe.username}
                         </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-4 edge">
+                        Follow this recipe:
                         {recipe.recipe}
                         </div>
                       {/* </a> */}
-                      <button  onClick={() => this.deleteRecipe(recipe._id)}>delete</button>
-                    
+                      <div class="col-md-2 edge">
+                      <button  onClick={() => this.deleteRecipe(recipe._id)}>X</button>
+                      </div>
                     </div>
                   );
                 })}
