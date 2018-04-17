@@ -11,7 +11,7 @@ const DidYouKnow = () => (
     <iframe width="560" height="315" src="https://www.youtube.com/embed/yKp8-X1zZqo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <br/>
     <h2>Meat is a carcinogen</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/BhiYAHHDgdk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QCld4E11PEM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 );
 
